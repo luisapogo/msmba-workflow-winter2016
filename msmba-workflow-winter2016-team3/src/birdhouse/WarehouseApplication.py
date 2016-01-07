@@ -36,7 +36,7 @@ class WarehouseApplication(RoleApplication):
     def prepare_drink_form_creator(self, stepname, form):
         '''
         Defines the data entry form for the barista application.
-        This form appears once the barista selects one of the pending orders from a list.
+        This form appears once the barista selects one of the pending orders from a list. NEW
         '''
         # !!! Use one or more fields from order to define label...
         form.add_task_label(fields=['Wood', 'Glue', 'Saw']) 

@@ -21,7 +21,7 @@ class OrderTakerApplication(RoleApplication):
     define the elements of the order taker application.  
     
     An application will always include the method __init__ and at least one
-    method to define a form that the user of this application will use.
+    method to define a form that the user of this application will use. NEW
     '''
 
     def __init__(self):

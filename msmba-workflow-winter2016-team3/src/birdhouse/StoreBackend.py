@@ -21,7 +21,7 @@ class StoreBackend(Backend):
     to handle each event that occurs in the process.  For Lab 5 we have set up the two additional
     methods you need:  drink_order_taken and drink_prepared.
     
-    See instruction documentation to see what you need to do.
+    See instruction documentation to see what you need to do. NEW
     '''
    
     def __init__(self): 
