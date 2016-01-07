@@ -40,9 +40,9 @@ class OrderTakerApplication(RoleApplication):
         This method does the actual work of building the user interface. Update 
         '''
         # !!! improve this text...
-        form.add_field(Type.CHOICE, "Wood", choices=['Cedar', 'Birch','Particle Board'])
-        form.add_field(Type.CHOICE, "Glue", choices=['Tacky', "Elmer's", 'Gorilla'])
-        form.add_field(Type.CHOICE, "Saw", choices=['Skill', "Hack", 'Bow'])                
+        form.add_field(Type.CHOICE, "Item1", choices=['Wood', 'Glue','Saw'])
+        form.add_field(Type.CHOICE, "Item2", choices=['Wood', 'Glue','Saw'])
+        form.add_field(Type.CHOICE, "Item3", choices=['Wood', 'Glue','Saw'])                
         # !!! Add at least two fields here, along with any additional static labels you need...
 
 if __name__ == '__main__':
