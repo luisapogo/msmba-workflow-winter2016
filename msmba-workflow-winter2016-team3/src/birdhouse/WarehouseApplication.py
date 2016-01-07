@@ -31,7 +31,7 @@ class WarehouseApplication(RoleApplication):
         # Declare any tasks that this role is able to perform:
         # !!! Modify to use actual task name and name_fields:
         self.register_sink_step("Processing", self.prepare_drink_form_creator, name_fields=['Wood', 'Glue','Saw'])
-
+        self.register_sink_step("Processing", self.take_drink_order_form_creator) 
 
     def prepare_drink_form_creator(self, stepname, form):
         '''
@@ -41,6 +41,15 @@ class WarehouseApplication(RoleApplication):
         # !!! Use one or more fields from order to define label...
         form.add_task_label(fields=['Wood', 'Glue', 'Saw']) 
         # !!! Add any static labels or fields you want to include in this form...
+    
+    def take_drink_order_form_creator(self, stepname, form):
+        '''
+        This method does the actual work of building the user interface. Update 
+        '''
+        # !!! improve this text...
+        form.add_field(Type.INTEGER, "Wood")
+        form.add_field(Type.INTEGER, "Glue")
+        form.add_field(Type.INTEGER, "Saw")
 
 if __name__ == '__main__':
     #starts up the BaristaApplication:
