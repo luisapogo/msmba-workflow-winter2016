@@ -29,7 +29,7 @@ class StoreBackend(Backend):
         Backend.__init__(self, theflowname)  
 
     def wire(self):
-        self.register_result_listener("Manager","Ordering",self.drink_order_taken)
+        self.register_result_listener("Manager","Count",self.drink_order_taken)
         self.register_result_listener("Warehouse", "Processing",self.drink_prepared)
         '''
         The wire method is where we tell MWP which tasks to keep track of.
