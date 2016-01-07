@@ -30,19 +30,20 @@ class OrderTakerApplication(RoleApplication):
         '''
         # Declare this application to be part of a given workflow, and responsible for a given role:
         # !!! Modify the following to use the actual role name you need...
-        super(OrderTakerApplication, self).__init__(theflowname, "Register") 
+        super(OrderTakerApplication, self).__init__(theflowname, "Manager") 
         # Declare any tasks that this role is able to perform:
         # !!! Modify to use actual name for this task...
-        self.register_source_step("Ordering", self.take_drink_order_form_creator) 
+        self.register_source_step("Count", self.take_drink_order_form_creator) 
 
     def take_drink_order_form_creator(self, stepname, form):
         '''
         This method does the actual work of building the user interface. Update 
         '''
         # !!! improve this text...
-        form.add_field(Type.CHOICE, "Wood", choices=['Cedar', 'Birch','Particle Board'])
-        form.add_field(Type.CHOICE, "Glue", choices=['Tacky', "Elmer's", 'Gorilla'])
-        form.add_field(Type.CHOICE, "Saw", choices=['Skill', "Hack", 'Bow'])                
+        form.add_field(Type.INTEGER, "Wood")
+        form.add_field(Type.INTEGER, "Glue")
+        form.add_field(Type.INTEGER, "Saw")
+            
         # !!! Add at least two fields here, along with any additional static labels you need...
 
 if __name__ == '__main__':
